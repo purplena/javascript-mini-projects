@@ -13,7 +13,75 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>scroll project</h1>
+    <!-- header -->
+    <header id="home">
+      <!-- navbar -->
+      <nav id="nav">
+        <div class="nav-center">
+          <div class="nav-header">
+            <img src="./logo.svg" alt="logo" class="logo" />
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">home</a>
+              </li>
+              <li>
+                <a href="#about" class="scroll-link">about</a>
+              </li>
+              <li>
+                <a href="#services" class="scroll-link">services</a>
+              </li>
+              <li>
+                <a href="#tours" class="scroll-link">tours</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- banner -->
+      <div class="banner">
+        <div class="container">
+          <h1>scroll project</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+            iste sed dolor qui excepturi accusantium commodi doloremque, placeat
+            perspiciatis illo!
+          </p>
+          <a href="#tours" class="scroll-link btn btn-white">explore tours</a>
+        </div>
+      </div>
+    </header>
+    <section id="about" class="section">
+      <div class="title">
+        <h2>about us</h2>
+      </div>
+    </section>
+    <section id="services" class="section">
+      <div class="title">
+        <h2>services</h2>
+      </div>
+    </section>
+    <section id="tours" class="section">
+      <div class="title">
+        <h2>tours</h2>
+      </div>
+    </section>
+    <!-- back to top -->
+    <a href="#home" class="scroll-link top-link">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <!-- footer -->
+    <footer class="section">
+      <p>
+        copyright &copy; backroads company <span id="date"></span>. All rights
+        reserved
+      </p>
+    </footer>
     <!-- javascript -->
     <script src="app.js"></script>
   </body>
