@@ -4,7 +4,7 @@ function getElement(selection) {
     return element;
   }
   throw new Error(
-    `Please check "${selection}" selector, no such element exists`
+    `Please check your selector: '${selection}'. No such element exists`
   );
 }
 
@@ -12,28 +12,31 @@ class Counter {
   constructor(element, value) {
     this.counter = element;
     this.value = value;
-    this.resetBtn = element.querySelector('.reset');
-    this.increaseBtn = element.querySelector('.increase');
-    this.decreaseBtn = element.querySelector('.decrease');
+    this.resetBth = element.querySelector('.reset');
+    this.increaseBth = element.querySelector('.increase');
+    this.decreaseBth = element.querySelector('.decrease');
     this.valueDOM = element.querySelector('.value');
     this.valueDOM.textContent = this.value;
-    // bind this to all function
+
     this.increase = this.increase.bind(this);
     this.decrease = this.decrease.bind(this);
     this.reset = this.reset.bind(this);
 
-    this.increaseBtn.addEventListener('click', this.increase);
-    this.decreaseBtn.addEventListener('click', this.decrease);
-    this.resetBtn.addEventListener('click', this.reset);
+    this.increaseBth.addEventListener('click', this.increase);
+    this.decreaseBth.addEventListener('click', this.decrease);
+    this.resetBth.addEventListener('click', this.reset);
   }
+
   increase() {
     this.value++;
     this.valueDOM.textContent = this.value;
   }
+
   decrease() {
     this.value--;
     this.valueDOM.textContent = this.value;
   }
+
   reset() {
     this.value = 0;
     this.valueDOM.textContent = this.value;
